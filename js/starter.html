@@ -37,7 +37,7 @@
     console.log(userName);
     
     document.getElementById('app').innerHTML += 
-      `<header>
+      `<header id='js4wp-header'>
         <h1 class='lobster green-fill'>${myHeader}</h1>
         <h2 class='roboto'> ${mySubheader}</h2>
         <h2>Welcome ${userName}!</h2>
@@ -45,14 +45,27 @@
 
 
       //my attempt at changing the font of the h1 and h2
-      var style = document.createElement('style');
+    var style = document.createElement('style');
       style.innerHTML =
-      `.lobster{
+      `body{
+        margin: 0 auto;
+      }
+
+      js4wp-header{
+        text-align: center;
+        display: flex;
+      }
+
+      .lobster{
         font-family: 'Lobster', cursive;
         color: white;
-      }`
+      }
+
+      .green-fill{
+        background: green;
+      }
       
-      `.roboto{
+      .roboto{
         font-family: 'Roboto', sans-serif;
       }`;
       
@@ -60,6 +73,10 @@
 
       ref.parentNode.insertBefore(style, ref);
 
+
+    const button = document.querySelector(`#get-user-name`);
+      console.log(button);
+  
       
 
   </script>
