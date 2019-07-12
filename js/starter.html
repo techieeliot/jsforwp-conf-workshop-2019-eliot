@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald|Roboto&display=swap" rel="stylesheet">
+    <title>Learning JavaScript</title>
+  </head>
+  <body>
+    <div id="app">
+      <button id="get-user-name">What's your name?</button>
+
+    </div>
+
+
+  </body>
+  <script>
+    const theFirstVariable = `This is a string variable`;
+    const theSecondVariable = 500;
+    const theThirdVariable = true;
+    const firstName = `Eliot`;
+    const lastName = `Sanford`;
+    const myHeader = `Yo, it's a Heada`;
+    const mySubheader = `...and I'm a sub headin', Gee!`;
+
+    const fullName = `${firstName} ${lastName}`;
+
+    // document.getElementById('app').innerHTML += 
+    // `<h1>${myHeader}</h1>
+    // <h2> ${mySubheader}</h2>
+    // <h2>Welcome ${fullName}</h2>`;
+    
+    
+    
+    
+    const userName = prompt(`Please enter your fullname`);
+    console.log(userName);
+    
+    document.getElementById('app').innerHTML += 
+      `<header>
+        <h1 class='lobster green-fill'>${myHeader}</h1>
+        <h2 class='roboto'> ${mySubheader}</h2>
+        <h2>Welcome ${userName}!</h2>
+      </header>`;
+
+
+      //my attempt at changing the font of the h1 and h2
+      var style = document.createElement('style');
+      style.innerHTML =
+      `.lobster{
+        font-family: 'Lobster', cursive;
+        color: white;
+      }`
+      
+      `.roboto{
+        font-family: 'Roboto', sans-serif;
+      }`;
+      
+      var ref = document.querySelector(`script`);
+
+      ref.parentNode.insertBefore(style, ref);
+
+      
+
+  </script>
+</html>
