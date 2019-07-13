@@ -1,0 +1,39 @@
+body{
+    margin: 0 auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+
+  #app{
+      margin: auto 10%;
+      background: #CFD8D7;
+      display: grid;
+      grid-gap: 2em;
+      
+  }
+
+  .js4wp-header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #js4wp-main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2em;
+      grid-auto-rows: minmax(10em, auto);
+  }
+
+  .lobster{
+    font-family: 'Lobster', cursive;
+    color: #9DBBAE;
+  }
+
+  .green-fill{
+    background: #617073;
+  }
+  
+  .roboto{
+    font-family: 'Roboto', sans-serif;
+  }
